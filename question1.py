@@ -36,7 +36,7 @@ try:
         if answer == l[1]:
             print('正解')
             lchika()
-        elif:
+        else:
             print('間違い')    
 except KeyboardInterrupt:
     pass
