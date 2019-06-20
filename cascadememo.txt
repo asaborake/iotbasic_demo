@@ -1,0 +1,8 @@
+#nglist作成
+nglist.txtを使う
+
+#ベクトルデータ作成
+opencv_createsamples -img ./pos/myimg0.jpg -vec ./vec/image.vec -num 50 -bgcolor 255 -maxidev 40 -maxxangle 0.8 -maxyangle 0.8 -maxzangle 0.5
+
+#カスケードファイル
+opencv_traincascade -data ./cascade/ -vec ./vec/image.vec -bg nglist.txt -numPos 1 -numNeg 360
