@@ -5,4 +5,4 @@ nglist.txtを使う
 opencv_createsamples -img ./pos/myimg0.jpg -vec ./vec/image.vec -num 50 -bgcolor 255 -maxidev 40 -maxxangle 0.8 -maxyangle 0.8 -maxzangle 0.5
 
 #カスケードファイル
-opencv_traincascade -data ./cascade/ -vec ./vec/image.vec -bg nglist.txt -numPos 1 -numNeg 360
+opencv_traincascade -data ./cascadefile/ -vec ./vec/image.vec -bg nglist.txt -numPos 50 -numNeg 360
