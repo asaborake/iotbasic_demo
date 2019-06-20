@@ -5,7 +5,6 @@ import cv2
 
 cascade_path = "./cascade.xml"
 cascade = cv2.CascadeClassifier(cascade_path)
-num = 0
 
 with picamera.PiCamera() as camera:
     with picamera.array.PiRGBArray(camera) as stream:
@@ -19,8 +18,6 @@ with picamera.PiCamera() as camera:
 	    if len(facerect) > 0:
 		for rect in facerect:
 			cv2.rectangle(stream.array, tuple(rect[0:2]), tuple(rect[0:2]+rect[2:4]), (0,0,255), thickness=2)
-			camera.capture('myimg' + str(num) + '.jpg')
-			num += 1
 
 	    #画面表示（第２引数に表示したいものを入れる）
             cv2.imshow('frame', stream.array)
